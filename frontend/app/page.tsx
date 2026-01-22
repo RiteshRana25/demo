@@ -6,6 +6,7 @@ import AmbulanceCarousel from "@/Components/AmbulanceCarousel";
 import EcgLine from "@/Components/EcgLine";
 import { db } from "@/firebase";
 import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
+import { Toaster, toast } from "react-hot-toast";
 
 const manrope = Manrope({ subsets: ["latin"], weight: ["700", "800"] });
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
@@ -59,9 +60,46 @@ export default function ComingSoon() {
         await updateDoc(doc(db, "submissions", currentDocId), {
           message: message,
         });
+        toast.success("Message sent successfully! 🎉", {
+          duration: 4000,
+          position: "bottom-center",
+          style: {
+            background: "#2E8B57",
+            color: "#F9FBFA",
+            padding: "16px",
+            borderRadius: "12px",
+            fontSize: "14px",
+            fontWeight: "600",
+          },
+        });
+      } else if (!message.trim()) {
+        toast.success("Email saved! 🎉", {
+          duration: 4000,
+          position: "bottom-center",
+          style: {
+            background: "#2E8B57",
+            color: "#F9FBFA",
+            padding: "16px",
+            borderRadius: "12px",
+            fontSize: "14px",
+            fontWeight: "600",
+          },
+        });
       }
     } catch (error) {
       console.error("Error updating document: ", error);
+      toast.error("Failed to send message. Please try again.", {
+        duration: 4000,
+        position: "bottom-center",
+        style: {
+          background: "#dc2626",
+          color: "#F9FBFA",
+          padding: "16px",
+          borderRadius: "12px",
+          fontSize: "14px",
+          fontWeight: "600",
+        },
+      });
     } finally {
       setShowMessagePrompt(false);
       setMessage("");
@@ -79,6 +117,7 @@ export default function ComingSoon() {
     <div
       className={`h-screen w-full overflow-hidden bg-[#ffffff] text-[#000000] flex flex-col items-center justify-between p-2 md:p-2 relative ${poppins.className}`}
     >
+      <Toaster />
       <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-[#4A90A4] opacity-10 blur-[150px] pointer-events-none" />
 
       {/* 1. Header Section */}

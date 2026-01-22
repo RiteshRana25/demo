@@ -1,37 +1,51 @@
 "use client";
 
-import AliceCarousel from "react-alice-carousel";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
-import "react-alice-carousel/lib/alice-carousel.css";
 
-export default function AmbulanceAliceCarousel() {
-  const items = [
-  <div key="1" className="relative w-full h-[90px] overflow-hidden">
-      <Image
-        src="/ambulance_icon.webp"
-        alt="Ambulance"
-        width={50}
-        height={90}
-        priority
-      />
-  </div>,
+export default function AmbulanceCarousel() {
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  <div key="2" className="w-full h-[90px]" />,
-];
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const animate = () => {
+      let position = -100;
+
+      const interval = setInterval(() => {
+        position += 2;
+        if (position > window.innerWidth) {
+          position = -100;
+        }
+        container.style.transform = `translateX(${position}px)`;
+      }, 30);
+
+      return () => clearInterval(interval);
+    };
+
+    animate();
+  }, []);
 
   return (
-    <AliceCarousel
-      items={items}
-      infinite
-      autoPlay
-      autoPlayDirection="rtl"
-      autoPlayInterval={0}
-      animationDuration={11000}
-      animationType="slide"
-      disableDotsControls
-      disableButtonsControls
-      mouseTracking={false}
-      touchTracking={false}
-    />
+    <div className="w-full h-[60px] h-md-[120px] overflow-hidden relative bg-transparent">
+      <div
+        ref={containerRef}
+        className="absolute top-0 left-0 h-full flex items-center"
+        style={{
+          width: "100px",
+          willChange: "transform",
+        }}
+      >
+        <Image
+          src="/ambulance_icon.webp"
+          alt="Ambulance"
+          width={50}
+          height={60}
+          priority
+          style={{ objectFit: "contain" }}
+        />
+      </div>
+    </div>
   );
 }

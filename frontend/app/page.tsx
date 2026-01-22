@@ -77,7 +77,7 @@ export default function ComingSoon() {
   };
   return (
     <div
-      className={`h-screen w-full overflow-hidden bg-[#ffffff] text-[#000000] flex flex-col items-center justify-between p-6 md:p-8 relative ${poppins.className}`}
+      className={`h-screen w-full overflow-hidden bg-[#ffffff] text-[#000000] flex flex-col items-center justify-between p-2 md:p-2 relative ${poppins.className}`}
     >
       <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-[#4A90A4] opacity-10 blur-[150px] pointer-events-none" />
 
@@ -94,7 +94,7 @@ export default function ComingSoon() {
       </div>
 
       {/* 2. Main Content (Center) */}
-      <main className="z-10 text-center w-full flex flex-col items-center justify-center flex-grow py-4">
+      <main className="z-10 text-center w-full flex flex-col items-center justify-center flex-grow ">
         <h2
           className={`${manrope.className} text-xl md:text-2xl lg:text-4xl font-extrabold mb-2 leading-tight text-[#2E8B57]`}
         >
@@ -199,16 +199,10 @@ export default function ComingSoon() {
             contact@icurein.com
           </a>
         </p>
-        <p className="text-[6px] md:text-[10px] mt-2 uppercase tracking-[0.3em]">
+        <p className="text-[6px] md:text-[10px] mt-2 uppercase tracking-[0.3em] text-center">
           This website is a pre-launch information page.full details will be
           available soon.
         </p>
-        <a
-          href="/admin"
-          className="text-[10px] mt-4 text-[#4A90A4] hover:underline opacity-50 hover:opacity-100"
-        >
-          Admin
-        </a>
       </footer>
     </div>
   );

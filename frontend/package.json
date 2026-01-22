@@ -9,8 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "firebase": "^12.8.0",
     "next": "16.1.4",
     "react": "19.2.3",
+    "react-alice-carousel": "^2.9.1",
     "react-dom": "19.2.3"
   },
   "devDependencies": {

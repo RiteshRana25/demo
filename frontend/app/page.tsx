@@ -129,7 +129,7 @@ export default function ComingSoon() {
       {/* 2. Main Content (Center) */}
       <main className="z-10 text-center w-full flex flex-col items-center flex-grow ">
         <h2
-          className={`${manrope.className} text-lg md:text-2xl lg:text-4xl font-extrabold mb-6 mt-10 leading-tight text-[#2E8B57]`}
+          className={`${manrope.className} text-lg md:text-2xl lg:text-4xl font-extrabold mb-6 mt-6 md:mt-0 leading-tight text-[#2E8B57]`}
         >
           Get Ready for a Whole New <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4A90A4] to-[#4A90A4] mb-6">
@@ -144,7 +144,7 @@ export default function ComingSoon() {
         {/* Form Section */}
         <div className="w-full max-w-md">
           <h3
-            className={`${manrope.className} text-xl md:text-xl mb-2 font-bold text-[#2E8B57]`}
+            className={`${manrope.className} text-xl md:text-xl mb-2 font-bold text-[#2E8B57] mt-6 md:mt-0`}
           >
             Stay Tuned.
           </h3>
@@ -169,7 +169,7 @@ export default function ComingSoon() {
               {isLoading ? "Submitting..." : "Notify Us"}
             </button>
           </form>
-          <p className="text-[10px] mt-3  italic">
+          <p className="text-[10px] mt-6 md:mt-3   italic">
             We value your privacy.
           </p>
         </div>

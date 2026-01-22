@@ -19,12 +19,6 @@ export default function ComingSoon() {
   const [currentDocId, setCurrentDocId] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const array = [
-    "Consult Anywhere",
-    "Global HealthCare Access",
-    "Advanced Coordination",
-    "And Much More",
-  ];
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -115,7 +109,7 @@ export default function ComingSoon() {
   };
   return (
     <div
-      className={`h-screen w-full overflow-hidden bg-[#ffffff] text-[#000000] flex flex-col items-center justify-between p-2 md:p-2 relative ${poppins.className}`}
+      className={`h-screen w-full overflow-hidden bg-[#ffffff] text-[#000000] flex flex-col items-center justify-between p-10 md:p-6 relative ${poppins.className}`}
     >
       <Toaster />
       <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-[#4A90A4] opacity-10 blur-[150px] pointer-events-none" />
@@ -133,17 +127,17 @@ export default function ComingSoon() {
       </div>
 
       {/* 2. Main Content (Center) */}
-      <main className="z-10 text-center w-full flex flex-col items-center justify-center flex-grow ">
+      <main className="z-10 text-center w-full flex flex-col items-center flex-grow ">
         <h2
-          className={`${manrope.className} text-xl md:text-2xl lg:text-4xl font-extrabold mb-2 leading-tight text-[#2E8B57]`}
+          className={`${manrope.className} text-lg md:text-2xl lg:text-4xl font-extrabold mb-6 mt-10 leading-tight text-[#2E8B57]`}
         >
           Get Ready for a Whole New <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4A90A4] to-[#4A90A4]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4A90A4] to-[#4A90A4] mb-6">
             Era of Healthcare.
           </span>
         </h2>
 
-        <p className="text-sm md:text-base opacity-80 mb-2 italic flex items-center gap-2">
+        <p className="text-sm md:text-base opacity-80 mb-2 italic flex items-center gap-2 mb-6">
           🚀 Launching Soon
         </p>
 

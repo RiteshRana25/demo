@@ -169,7 +169,7 @@ export default function ComingSoon() {
               {isLoading ? "Submitting..." : "Notify Us"}
             </button>
           </form>
-          <p className="text-[10px] mt-6 md:mt-3   italic">
+          <p className="text-[10px] mt-6 md:mt-3 mb-10 md:mb-0 italic">
             We value your privacy.
           </p>
         </div>

@@ -148,7 +148,7 @@ export default function ComingSoon() {
           >
             Stay Tuned.
           </h3>
-          <p className="text-xs opacity-70 mb-4 font-light">
+          <p className="text-xs opacity-70 mb-6 md:mb-4 font-light ">
             Join the waitlist for exclusive early access.
           </p>
 
@@ -158,7 +158,7 @@ export default function ComingSoon() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="flex-1 px-5 py-3 rounded-xl bg-[#ffffff] border-2 border-[#4A90A4] focus:outline-none focus:border-[#2E8B57] transition-all text-sm text-[#000000]"
+              className="flex-1 px-5 py-3 rounded-xl bg-[#ffffff] border-2 border-[#4A90A4] focus:outline-none focus:border-[#2E8B57] transition-all text-sm text-[#000000] md:mb-0 mb-4"
               required
             />
             <button 

@@ -117,7 +117,7 @@ export default function ComingSoon() {
       {/* 1. Header Section */}
       <header className="z-10 flex items-center">
         <h1
-          className={`${manrope.className} text-4xl font-extrabold tracking-tight text-[#2E8B57] mb-4`}
+          className={`${manrope.className} text-4xl font-extrabold tracking-tight text-[#2E8B57] mb-0`}
         >
           iCureIn
         </h1>
@@ -223,16 +223,16 @@ export default function ComingSoon() {
         <p className="text-xs md:text-lg font-semibold mb-1 text-[#2E8B57]">
           Interested to be a part of this revolution
         </p>
-        <p className="text-[11px] md:text-lg opacity-70">
-          Investment or partnership inquiries:
-          <a
+        <p className="text-[15px] font-bold md:text-lg opacity-70">
+          Enquire about Investment or partnership:
+        </p>
+        <a
             href="mailto:contact@icurein.com"
-            className="ml-1 text-[#4A90A4] hover:underline font-bold"
+            className="ml-1 text-[#2E8B57] hover:underline font-bold"
           >
             contact@icurein.com
           </a>
-        </p>
-        <p className="text-[6px] md:text-[10px] mt-2 uppercase tracking-[0.3em] text-center">
+        <p className="text-[9px] font-bold md:text-[10px] mt-2 uppercase tracking-[0.3em] text-center">
           This website is a pre-launch information page.full details will be
           available soon.
         </p>
